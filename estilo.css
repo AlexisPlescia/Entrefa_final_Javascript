@@ -1,0 +1,29 @@
+
+.padre{
+    background: #7445e0;
+    display: flex;
+    height: 500px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.hijo{
+    background: goldenrod;
+    width: 18%;
+    color: #fff;
+    font-family: serif;
+    font-size: 25px;
+    height: 200px;
+}
+
+/*Seleccionara todos los elementos que esten despuyes de este elemento*/
+
+.hijo:nth-child(3)~.hijo{
+    background: #000;
+    transition: all 0.5s ease-in;
+}
+
+.hijo:first-of-type:hover~.hijo{
+    background: #7007a0;
+    transform: rotate(360deg);
+}
