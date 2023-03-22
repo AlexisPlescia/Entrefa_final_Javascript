@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
+<script type="text/javascript" src="horaActual.js"></script>
 </head>
 <body>  
     <form action="" method= "POST" id="formulario">
@@ -31,15 +31,32 @@
                 <label for="">Telefono movil</label>
             </div>
             <div class="grupo">
-                <input type=date class="fecha" required ><span class="fecha"></span>
+                <div id="mostrarFecha" class="grupo">
+                    <input id="fechaActual" type="date" class="fecha" required>
+                    <script>
+                      function mostrarFecha() {
+                        var fecha = new Date().toISOString().slice(0, 10);
+                        document.getElementById("fechaActual").value = fecha;
+                      }
+                      mostrarFecha();
+                    </script>
+                  </div>                  
             </div>
             <div class="grupo">
                 <input type="email" class="email" required ><span class="barra"></span>
                 <label for="">email</label>
             </div>
-            <div class="grupo">
-                <input type="time" class="hora" required >
-            </div>
+            <div id="mostrarHora" class="grupo">
+                <input id="horaActual" type="time" class="hora" required>
+                <script>
+                  function mostrarHora() {
+                    var hora = new Date().toLocaleTimeString();
+                    document.getElementById("horaActual").value = hora;
+                  }
+                  mostrarHora();
+                </script>
+              </div>
+              
             <button class="boton" type="submit">Agendar turno</button>
         </div>
     </form>
