@@ -33,19 +33,19 @@ h1{
     text-align: center;
     font-weight: 700;
 }
-form{
-    background: #fff;
-    padding: 40px 0;
-    box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-    position: absolute;
-}
+    form{
+        background: #fff;
+        padding: 40px 0;
+        box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+        position: absolute;
+    }
 
-.form{
-    width: 100%;
-    margin: auto;
-    width: 1200px;
-}
+    .form{
+        width: 100%;
+        margin: auto;
+        width: 1200px;
+    }
 form .grupo{
     position: relative;
     margin: 45px;
